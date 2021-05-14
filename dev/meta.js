@@ -7,7 +7,7 @@ const config = {
     author: '',
     copyright: '',
 
-    siteTitle: 'GPGPU Particle Types - type A',
+    siteTitle: 'GPGPU Particle Types',
     useTitleAsOgTitle: true, // ogTitleをtitleと同じにするかどうか
     ogTitle: '',
     useTitleSeparater: true, // タイトルのセパレータ デフォルトで`${title}${useTitleSeparater}${siteTitle}` となる
