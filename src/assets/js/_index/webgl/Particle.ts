@@ -16,13 +16,13 @@ import { HalfFloatType, LinearFilter, NearestFilter } from 'three/src/constants'
 // import { GPUComputationRenderer, Variable } from 'three/examples/jsm/misc/GPUComputationRenderer' ;
 import { GPUComputationRenderer, Variable } from './GPUComputationRenderer';
 
-import gsap, { Expo } from 'gsap';
+import gsap, { Expo } from 'gsap/src/gsap-core';
 import WebFont from "webfontloader";
 
 const DATA_TEXTURE_SIZE = 100;  // DataTextureの一辺のサイズ
 const NUM_PARTICLES = DATA_TEXTURE_SIZE * DATA_TEXTURE_SIZE; // パーティクルの数
 const IMG_CANVAS_SIZE = 512;  // 画像のピクセル情報を取得する際に使用するcanvasの一辺のサイズ
-const POINT_SIZE_BASIS = 30;  // IMG_CANVAS_SIZEを基準にしたポイントのサイズ
+const POINT_SIZE_BASIS = 15;  // IMG_CANVAS_SIZEを基準にしたポイントのサイズ
 const POINTER_RADIUS_BASIS = 160;  // IMG_CANVAS_SIZEを基準にしたポインターの半径
 const TYPE_POINT_TEXTURE_UNIT = 64;  // ポイントクラウド用のテクスチャの一文字のサイズ
 
@@ -347,11 +347,12 @@ export default class WebGLMesh extends Object3D {
 
   public onResize() {
     // drawScaleは画面サイズの短辺を基準
+    const pixelRatio = this.renderer.getPixelRatio();
     const drawAreaSize = Math.min(window.innerWidth, window.innerHeight);
     this.drawScale = drawAreaSize / IMG_CANVAS_SIZE;
     this.material.uniforms.drawScale.value = this.drawScale;
-    this.material.uniforms.pointSize.value = POINT_SIZE_BASIS / IMG_CANVAS_SIZE * drawAreaSize;
-    this.positionVelocityVariable.material.uniforms.pointerForceRadius.value = POINTER_RADIUS_BASIS / IMG_CANVAS_SIZE * drawAreaSize;
+    this.material.uniforms.pointSize.value = POINT_SIZE_BASIS / IMG_CANVAS_SIZE * drawAreaSize * pixelRatio;
+    this.positionVelocityVariable.material.uniforms.pointerForceRadius.value = POINTER_RADIUS_BASIS / IMG_CANVAS_SIZE * drawAreaSize * pixelRatio;
   }
 
   public onPointerMove(posX: number, posY: number) {
