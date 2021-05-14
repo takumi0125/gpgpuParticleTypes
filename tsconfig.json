@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es5",
+    "module": "esnext",
+    "jsx": "react",
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "isolatedModules": false,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./src/assets/js/*"
+      ],
+      "@/*": [
+        "./src/assets/js/*"
+      ]
+    },
+    "types": [
+      "@types/node"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "htdocs"
+  ]
+}
