@@ -1,6 +1,6 @@
 const config = {
   default: {
-    siteUrl: 'https://takumi0125.github.io/gpgpuParticleTypes/typeA/',
+    siteUrl: 'https://takumi0125.github.io/gpgpuParticleTypes/',
 
     showOGP: true, // ogpタグを表示するかどうか
 
@@ -23,7 +23,7 @@ const config = {
 
     ogSiteName: 'GPGPU Particle Types - type B',
 
-    ogImage: 'https://takumi0125.github.io/gpgpuParticleTypes/typeA/assets/img/ogp.png',
+    ogImage: 'https://takumi0125.github.io/gpgpuParticleTypes/assets/img/ogp.png',
     ogImageType: 'image/png',
     ogImageWidth: '1200',
     ogImageHeight: '630',

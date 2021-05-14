@@ -3,7 +3,7 @@ GPGPU Particle sample
 
 ![GPGPU Particle sample](https://github.com/takumi0125/gpgpuParticleTypes/blob/master/src/assets/img/ogp.png)
 
-[Demo](https://takumi0125.github.io/gpgpuParticleTypes/typeA/)
+[Demo](https://takumi0125.github.io/gpgpuParticleTypes/)
 
 
 ## コマンド
